@@ -1,7 +1,7 @@
 import printValue from './util/printValue';
 
 export const createDefaultLocale = () => {
-  let mixed = {
+  const mixed = {
     default: '${path} is invalid',
     required: '${path} is a required field',
     oneOf: '${path} must be one of the following values: ${values}',
@@ -23,7 +23,7 @@ export const createDefaultLocale = () => {
     },
   };
 
-  let string = {
+  const string = {
     length: '${path} must be exactly ${length} characters',
     min: '${path} must be at least ${min} characters',
     max: '${path} must be at most ${max} characters',
@@ -35,7 +35,7 @@ export const createDefaultLocale = () => {
     uppercase: '${path} must be a upper case string',
   };
 
-  let number = {
+  const number = {
     min: '${path} must be greater than or equal to ${min}',
     max: '${path} must be less than or equal to ${max}',
     lessThan: '${path} must be less than ${less}',
@@ -46,19 +46,19 @@ export const createDefaultLocale = () => {
     integer: '${path} must be an integer',
   };
 
-  let date = {
+  const date = {
     min: '${path} field must be later than ${min}',
     max: '${path} field must be at earlier than ${max}',
   };
 
-  let boolean = {};
+  const boolean = {};
 
-  let object = {
+  const object = {
     noUnknown:
       '${path} field cannot have keys not specified in the object shape',
   };
 
-  let array = {
+  const array = {
     min: '${path} field must have at least ${min} items',
     max: '${path} field must have less than or equal to ${max} items',
   };
